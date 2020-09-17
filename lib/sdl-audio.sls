@@ -38,3 +38,6 @@
 
 (define sdl-close-audio-device SDL_CloseAudioDevice)
 
+
+(define (set-audio-callback callback) ;the argument is a procedure to function as the audio callback 
+            (make-ftype-pointer SDL_AudioCallback callback))
