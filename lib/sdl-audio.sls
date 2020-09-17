@@ -77,3 +77,5 @@
             (ftype-set! SDL_AudioSpec (userdata) fptr (sdl-audio-spec-userdata) audio_spec)
             fptr))
 
+(define (set-audio-callback callback) ;the argument is a procedure to function as the audio callback 
+            (make-ftype-pointer SDL_AudioCallback callback))
